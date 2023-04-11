@@ -5,7 +5,7 @@ Mi nombre es Tomas Birbe. Me pueden llamar como gusten, aunque la mayor parte de
 
 **• De donde vienes a donde vas. Cual es tu conocimiento previo**
 
-Vengo de estudiar Ing. en Sistemas en la UTN en donde llegue hasta tercer año, hasta que aparecio la pandemia. Decidi frenar el estudio formal y enfocarme al desarrollo web realizando cursos (Platzi, Udemy y YouTube), leyendo sobre el mundo web (Kent C Dodds, Lee Robinson y Gonzalo Pozzo) y realizando proyectos ([Portfolio](https://tomasbirbe.vercel.app/) ). Ahora estoy en camino a convertirme oficialmente en desarrollador profesional.
+Vengo de estudiar Ing. en Sistemas en la UTN en donde llegue hasta tercer año, hasta que aparecio la pandemia. Decidi frenar el estudio formal y enfocarme al desarrollo web realizando cursos (Platzi, Udemy y YouTube), leyendo sobre el mundo web (Kent C Dodds, Lee Robinson y Gonzalo Pozzo) y realizando proyectos ([Portfolio](https://tomasbirbe.vercel.app/)). Ahora estoy en camino a convertirme oficialmente en desarrollador profesional.
 
 **• Qué hobbies tienes. En qué inviertes tu tiempo**
 
