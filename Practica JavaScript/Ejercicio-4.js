@@ -17,10 +17,12 @@ function primeraMayuscula(str) {
 
 	const palabrasEnMayuscula = []
 
-	for (let palabra of palabras) {
-		const [primeraLetra, ...resto] = palabra
-		palabrasEnMayuscula.push(primeraLetra.toUpperCase() + resto.join(''))
+	for (let i = 0; i < palabras.length; i++) {
+		const [primeraLetra, ...resto] = palabras[i]
+		palabras[i] = primeraLetra.toUpperCase() + resto.join('')
 	}
 
-	return palabrasEnMayuscula.join(' ')
+	return palabras.join(' ')
 }
+
+console.log(primeraMayuscula('Erase una vez que se era'))
