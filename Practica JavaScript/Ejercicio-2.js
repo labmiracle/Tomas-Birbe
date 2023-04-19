@@ -10,5 +10,3 @@ function sum(arr, n) {
 
 	return arr[counter] + arr[accum];
 }
-
-console.log(sum([1,2,3,4,5], 3 ))
