@@ -16,5 +16,3 @@ function camelize(str) {
 
 	return wordsCamelized.join('')
 }
-
-console.log(camelize('Hola me llamo Tomas'))
