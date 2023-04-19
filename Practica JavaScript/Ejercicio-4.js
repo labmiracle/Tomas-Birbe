@@ -15,8 +15,6 @@ function palabraMasLarga(str) {
 function primeraMayuscula(str) {
 	const palabras = str.split(' ')
 
-	const palabrasEnMayuscula = []
-
 	for (let i = 0; i < palabras.length; i++) {
 		const [primeraLetra, ...resto] = palabras[i]
 		palabras[i] = primeraLetra.toUpperCase() + resto.join('')
