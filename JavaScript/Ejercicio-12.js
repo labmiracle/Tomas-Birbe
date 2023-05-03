@@ -7,7 +7,6 @@ async function game() {
 	let gameFinished = false;
 	let changeDifficulty = true;
 	while (!gameFinished) {
-		console.clear()
 		console.log("Escribir 'exit' para salir o 'cambiar dificultad' para cambiar de dificultad")
 		while (changeDifficulty) {
 			difficultyResponse = await prompt.question(`Seleccionar dificultad 
@@ -61,13 +60,15 @@ async function game() {
 			prompt.close()
 		} else {
 			const num = Number(guessResponse)
-
 			if (num) {
 				console.clear()
 				const secretNumber = Math.round(Math.random() * difficulty)
+				console.log('hola!')
 				if (num === secretNumber) {
+					console.clear()
 					console.log('Acertaste!')
 				} else {
+					console.clear()
 					console.log(`Segui intentando! El numero era ${secretNumber}`)
 				}
 			} else {
