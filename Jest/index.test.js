@@ -2,6 +2,7 @@ const { fizzBuzz } = require("./src/fizzbuzz");
 const { isLeapYear } = require("./src/ejercicio.1.2");
 const { normalizeADN } = require("./src/ejercicio.1.3");
 const { sumPositiveNumbers } = require("./src/ejercicio-1.4");
+const { firstConsecutiveLetter } = require("./src/ejercicio-1.5");
 
 describe("FizzBuzz", () => {
   it("fizzBuzz recibe un numero divisible por 5 y por 3", () => {
@@ -78,5 +79,31 @@ describe("Ejercicio 1.4 - Suma de numeros positivos", () => {
 
   it("El argumento es un arreglo de numeros y letras", () => {
     expect(sumPositiveNumbers([1, 2, "3", "4", "a", "b"])).toBe(10);
+  });
+});
+
+describe("Ejercicio 1.5 - Encontrar primer letra repetida consecutivamente", () => {
+  it("El argumento es una cadena con una letra repetida", () => {
+    expect(firstConsecutiveLetter("asdfgqwwert")).toBe(6);
+  });
+
+  it("El argumento es una cadena con una letra repetida", () => {
+    expect(firstConsecutiveLetter("asdfgqwwert")).toBe(6);
+  });
+
+  it("El argumento es una cadena con una letra repetida en la ultima posicion", () => {
+    expect(firstConsecutiveLetter("asdfgqwertt")).toBe(9);
+  });
+
+  it("El argumento es una cadena con una letra repetida en la primer posicion", () => {
+    expect(firstConsecutiveLetter("aasdfgqwert")).toBe(0);
+  });
+
+  it("El argumento es una cadena con espacios", () => {
+    expect(firstConsecutiveLetter("  a sdfgg  qwert ")).toBe(4);
+  });
+
+  it("El argumento es una cadena con una letra repetida en mayuscula", () => {
+    expect(firstConsecutiveLetter("asdfgGqwert ")).toBe(4);
   });
 });
