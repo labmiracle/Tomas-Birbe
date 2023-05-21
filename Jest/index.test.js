@@ -1,6 +1,7 @@
 const { fizzBuzz } = require("./src/fizzbuzz");
 const { isLeapYear } = require("./src/ejercicio.1.2");
 const { normalizeADN } = require("./src/ejercicio.1.3");
+const { sumPositiveNumbers } = require("./src/ejercicio-1.4");
 
 describe("FizzBuzz", () => {
   it("fizzBuzz recibe un numero divisible por 5 y por 3", () => {
@@ -63,5 +64,19 @@ describe("Ejercicio 1.3 - Normalizacion de cadenas de ADN", () => {
 
   it("El argumento NO es una cadena canonica y tiene letras minuscula", () => {
     expect(normalizeADN("DCETabWAGGQaGBgHxTA")).toBe("CTAGGGTA");
+  });
+});
+
+describe("Ejercicio 1.4 - Suma de numeros positivos", () => {
+  it("El argumento es un arreglo vacio", () => {
+    expect(sumPositiveNumbers([])).toBe(0);
+  });
+
+  it("El argumento es un arreglo de numeros", () => {
+    expect(sumPositiveNumbers([1, 2, 3, 4])).toBe(10);
+  });
+
+  it("El argumento es un arreglo de numeros y letras", () => {
+    expect(sumPositiveNumbers([1, 2, "3", "4", "a", "b"])).toBe(10);
   });
 });
