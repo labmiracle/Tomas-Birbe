@@ -1,5 +1,6 @@
 const { fizzBuzz } = require("./src/fizzbuzz");
 const { isLeapYear } = require("./src/ejercicio.1.2");
+const { normalizeADN } = require("./src/ejercicio.1.3");
 
 describe("FizzBuzz", () => {
   it("fizzBuzz recibe un numero divisible por 5 y por 3", () => {
@@ -25,7 +26,7 @@ describe("FizzBuzz", () => {
   });
 });
 
-describe("Ejercicio 1.2", () => {
+describe("Ejercicio 1.2 - Validar si un año es bisiesto", () => {
   it("El argumento es un año bisiesto", () => {
     expect(isLeapYear(2024)).toBeTruthy();
   });
@@ -44,5 +45,23 @@ describe("Ejercicio 1.2", () => {
 
   it("El argumento es una cadena", () => {
     expect(() => isLeapYear("Hola")).toThrow("El año debe ser un numero");
+  });
+});
+
+describe("Ejercicio 1.3 - Normalizacion de cadenas de ADN", () => {
+  it("El argumento es una cadena vacia", () => {
+    expect(normalizeADN("")).toBe("");
+  });
+
+  it("El argumento es una cadena canonica", () => {
+    expect(normalizeADN("CTAGGGTA")).toBe("CTAGGGTA");
+  });
+
+  it("El argumento NO es una cadena canonica", () => {
+    expect(normalizeADN("DCETWAGGQGBHTA")).toBe("CTAGGGTA");
+  });
+
+  it("El argumento NO es una cadena canonica y tiene letras minuscula", () => {
+    expect(normalizeADN("DCETabWAGGQaGBgHxTA")).toBe("CTAGGGTA");
   });
 });
