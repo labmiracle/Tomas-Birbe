@@ -1,6 +1,6 @@
 const { fizzBuzz } = require("./src/fizzbuzz");
-const { isLeapYear } = require("./src/ejercicio.1.2");
-const { normalizeADN } = require("./src/ejercicio.1.3");
+const { isLeapYear } = require("./src/ejercicio-1.2");
+const { normalizeADN } = require("./src/ejercicio-1.3");
 const { sumPositiveNumbers } = require("./src/ejercicio-1.4");
 const { firstConsecutiveLetter } = require("./src/ejercicio-1.5");
 
