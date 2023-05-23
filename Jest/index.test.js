@@ -3,6 +3,7 @@ const { isLeapYear } = require("./src/ejercicio-1.2");
 const { normalizeADN } = require("./src/ejercicio-1.3");
 const { sumPositiveNumbers } = require("./src/ejercicio-1.4");
 const { firstConsecutiveLetter } = require("./src/ejercicio-1.5");
+const { checkMatrix } = require("./src/ejercicio-1.6");
 
 describe("FizzBuzz", () => {
   it("fizzBuzz recibe un numero divisible por 5 y por 3", () => {
@@ -105,5 +106,15 @@ describe("Ejercicio 1.5 - Encontrar primer letra repetida consecutivamente", () 
 
   it("El argumento es una cadena con una letra repetida en mayuscula", () => {
     expect(firstConsecutiveLetter("asdfgGqwert ")).toBe(4);
+  });
+});
+
+describe("Ejercicio 1.6 - Contar maxima cantidad de 'unos' consecutivos en un arreglo", () => {
+  it("El argumento es un arreglo que contiene 0 y 1", () => {
+    expect(checkMatrix([0, 0, 0, 0, 1, 1, 1, 0, 0])).toBe(3);
+  });
+
+  it("El argumento es un arreglo que contiene 0 y 1 como cadenas ", () => {
+    expect(checkMatrix([0, 0, 0, "0", "1", 1, "1", 0, 0])).toBe(3);
   });
 });
