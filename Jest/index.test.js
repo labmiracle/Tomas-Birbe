@@ -5,6 +5,7 @@ const { sumPositiveNumbers } = require("./src/ejercicio-1.4");
 const { firstConsecutiveLetter } = require("./src/ejercicio-1.5");
 const { checkMatrix } = require("./src/ejercicio-1.6");
 const { lookup } = require("./src/ejercicio-1.7");
+const { addToCart, setPrice } = require("./src/ejercicio-1.8");
 
 describe("FizzBuzz", () => {
   it("fizzBuzz recibe un numero divisible por 5 y por 3", () => {
@@ -145,5 +146,42 @@ describe("lookup()", () => {
     expect(() => {
       lookup("mfowler", "noprop");
     }).toThrow(/Could not find property/);
+  });
+});
+
+describe("setPrice()", () => {
+  it("should set the price in the given item object, immutably.", () => {
+    const item = {
+      name: "test",
+      price: 30,
+    };
+    const copy = Object.assign({}, item);
+
+    const actual = setPrice(item, 50);
+    const expected = {
+      name: "test",
+      price: 50,
+    };
+
+    expect(actual).toEqual(expected);
+
+    expect(item).toEqual(copy);
+  });
+});
+
+describe("addToCart()", () => {
+  it("should add item to cart, immutably", () => {
+    const originalCart = [];
+    const item = {
+      name: "Toy",
+      price: 30,
+    };
+    const copy = originalCart.slice();
+
+    const actual = addToCart(originalCart, item);
+    const expected = [item];
+
+    expect(actual).toEqual(expected);
+    expect(originalCart).toEqual(copy);
   });
 });
