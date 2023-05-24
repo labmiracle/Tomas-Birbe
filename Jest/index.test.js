@@ -4,6 +4,7 @@ const { normalizeADN } = require("./src/ejercicio-1.3");
 const { sumPositiveNumbers } = require("./src/ejercicio-1.4");
 const { firstConsecutiveLetter } = require("./src/ejercicio-1.5");
 const { checkMatrix } = require("./src/ejercicio-1.6");
+const { lookup } = require("./src/ejercicio-1.7");
 
 describe("FizzBuzz", () => {
   it("fizzBuzz recibe un numero divisible por 5 y por 3", () => {
@@ -116,5 +117,33 @@ describe("Ejercicio 1.6 - Contar maxima cantidad de 'unos' consecutivos en un ar
 
   it("El argumento es un arreglo que contiene 0 y 1 como cadenas ", () => {
     expect(checkMatrix([0, 0, 0, "0", "1", 1, "1", 0, 0])).toBe(3);
+  });
+});
+
+describe("lookup()", () => {
+  it("lookup(<login>, 'likes') should return likes for the specified user.", () => {
+    const actual = lookup("norvig", "likes");
+    const expected = ["AI", "Search", "NASA", "Mars"];
+
+    expect(actual).toEqual(expected);
+  });
+
+  it("lookup(<login>, 'lastName') should return the last name for the specified user", () => {
+    const actual = lookup("knuth", "lastName");
+    const expected = "Knuth";
+
+    expect(actual).toEqual(expected);
+  });
+
+  it("with unknown user should throw an error with the correct message", () => {
+    expect(() => {
+      lookup("nobody", "likes");
+    }).toThrow(/Could not find user/);
+  });
+
+  it("with unknown property should throw an error the correct message", () => {
+    expect(() => {
+      lookup("mfowler", "noprop");
+    }).toThrow(/Could not find property/);
   });
 });
