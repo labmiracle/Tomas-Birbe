@@ -1,17 +1,18 @@
 {
-  "name": "sass",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "eslint": "^8.41.0",
-    "prettier": "^2.8.8",
-    "sass": "^1.62.1"
-  }
+	"name": "sass",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "npx sass src/styles/main.scss build/styles.css"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"eslint": "^8.41.0",
+		"prettier": "^2.8.8",
+		"sass": "^1.62.1"
+	}
 }

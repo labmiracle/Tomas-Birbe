@@ -1,0 +1,10 @@
+@use 'css-reset';
+@import 'mixin.scss';
+
+body {
+	background-color: black;
+	color: white;
+	@include responsive-grid(200px);
+}
+
+
