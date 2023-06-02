@@ -1,0 +1,7 @@
+$dias: 'monday' 'tuesday' 'wednesday' 'thursday' 'friday' 'saturday' 'sunday';
+
+@each $dia in $dias {
+	.#{$dia} {
+		background-color: firebrick
+	}
+};
