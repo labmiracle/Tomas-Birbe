@@ -1,0 +1,27 @@
+$dark-mode: false;
+$background: white;
+$foreground: black ;
+
+@if($dark-mode) {
+	$background: black;
+	$foreground: white;
+} 
+
+@mixin primary-button {
+	background-color: lightblue;
+	color: black;
+	padding-inline: 15px;
+	padding-block: 7px;
+	border-radius: 4px;
+}
+
+body {
+	background-color: $background;
+	color: $foreground;
+}
+
+button {
+	&--primary {
+		@include primary-button()
+	};
+}
