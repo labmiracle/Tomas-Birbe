@@ -1,0 +1,14 @@
+$containter-width: 800px;
+
+.container {
+	width: $container-width;
+
+	section {
+		width: $container-width / 2;
+	}
+
+	article {
+		width: ($container-width / 2) - 15px;
+	}
+}
+
