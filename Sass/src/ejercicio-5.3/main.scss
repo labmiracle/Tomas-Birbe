@@ -1,0 +1,11 @@
+@import 'days';
+
+@function color-por-dia($d) {
+	@each $day,$color in $dias {
+		@if $day == $d {
+			@return $color;
+		} 
+	}
+	@return 'white'
+
+};
