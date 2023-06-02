@@ -1,0 +1,22 @@
+.alert {
+	display: float;
+	right: 15px;
+	top: 20px;
+
+	&--warning {
+		@extend .alert;
+		background-color: darkgoldenrod;
+	};
+
+	&--error {
+		@extend .alert;
+		background-color: darkred;
+	};
+
+	&--info {
+		@extend .alert;
+		background-color: lightskyblue
+	};
+}
+
+
