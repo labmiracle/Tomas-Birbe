@@ -1,0 +1,25 @@
+button {
+	background-color: #335C81;
+
+	&:hover {
+		background-color: #2C4F6D;
+	}
+
+	&:active {
+		background-color: #24425B;
+	}
+}
+
+section {
+	color: white;
+
+	h2 {
+		font-size: 24px;
+		color: crimson;
+		font-weight: bold;
+	}
+
+	h3 {
+		font-size: 20px;
+	}
+}
