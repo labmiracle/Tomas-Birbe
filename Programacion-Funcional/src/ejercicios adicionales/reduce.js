@@ -7,23 +7,23 @@ export function reduce(arr, func, initialState) {
   return acc;
 }
 
-const totalMass = characters.reduce(
+const totalMass = reduce(characters,
   (acumulatedMass, character) => acumulatedMass + Number(character.mass),
   0
 );
 
-const totalHeight = characters.reduce(
+const totalHeight = reduce(characters,
   (acumulatedHeight, character) => acumulatedHeight + Number(character.height),
   0
 );
 
-const totalLenghtOfCharactersName = characters.reduce(
+const totalLenghtOfCharactersName = reduce(characters,
   (accumulatedCharacters, character) =>
     accumulatedCharacters + character.gender.length,
   0
 );
 
-const totalLenghtOfCharacterEyes = characters.reduce(
+const totalLenghtOfCharacterEyes = reduce(characters,
   (accumulatedCharacters, character) =>
     accumulatedCharacters + character.eye_color.length,
   0
