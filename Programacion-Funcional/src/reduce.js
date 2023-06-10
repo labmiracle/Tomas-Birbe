@@ -12,7 +12,7 @@ const totalHeight = characters.reduce(
 
 const totalLenghtOfCharactersName = characters.reduce(
   (accumulatedCharacters, character) =>
-    accumulatedCharacters + character.male.length,
+    accumulatedCharacters + character.gender.length,
   0
 );
 
