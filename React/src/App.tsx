@@ -1,5 +1,11 @@
+import { Props } from './Props';
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <Props></Props>
+    </>
+  );
 }
 
 export default App;
