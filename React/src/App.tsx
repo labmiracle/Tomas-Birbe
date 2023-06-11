@@ -1,5 +1,5 @@
 import { Props } from './Props';
-import { Counter } from './State';
+import { State } from './State';
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <h1>Props</h1>
       <Props></Props>
       <h2>State</h2>
-      <Counter></Counter>
+      <State></State>
     </>
   );
 }
