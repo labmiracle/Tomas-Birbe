@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import { Todo } from './Todo';
-import { RandomText } from './randomText';
 
 type Todo = {
   userId: number;
@@ -9,14 +7,11 @@ type Todo = {
   completed: boolean;
 };
 
-export function Events() {
+export function SelectCountry() {
   const [selectedValue, setSelectedValue] = useState('');
 
   return (
     <>
-      <Todo></Todo>
-      <RandomText></RandomText>
-
       <p>{selectedValue ? selectedValue : 'Previsualizacion'}</p>
       <label htmlFor="countries">Elegi un pais</label>
       <select
