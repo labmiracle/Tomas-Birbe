@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import { Todo } from './Todo';
+import { RandomText } from './randomText';
 
 type Todo = {
   userId: number;
@@ -12,6 +12,7 @@ export function Events() {
   return (
     <>
       <Todo></Todo>
+      <RandomText></RandomText>
     </>
   );
 }
