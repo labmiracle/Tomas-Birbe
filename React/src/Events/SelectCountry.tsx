@@ -1,18 +1,11 @@
-import { useState } from 'react';
-
-type Todo = {
-  userId: number;
-  id: number;
-  title: string;
-  completed: boolean;
-};
+import { useState } from "react";
 
 export function SelectCountry() {
-  const [selectedValue, setSelectedValue] = useState('');
+  const [selectedValue, setSelectedValue] = useState("");
 
   return (
     <>
-      <p>{selectedValue ? selectedValue : 'Previsualizacion'}</p>
+      <p>{selectedValue ? selectedValue : "Previsualizacion del pais"}</p>
       <label htmlFor="countries">Elegi un pais</label>
       <select
         name="country"

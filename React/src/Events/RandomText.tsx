@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export function RandomText() {
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
 
   return (
     <>
       <p>Escribi cualquier texto!</p>
-      <p>{text}</p>
+      <p>{text ? text : "Previsualizacion del texto"}</p>
       <label htmlFor="randomText">Texto </label>
       <input
         type="text"
