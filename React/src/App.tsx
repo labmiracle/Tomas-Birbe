@@ -1,6 +1,7 @@
-import { Props } from './Props';
-import { State } from './State';
-import { Events } from './Events';
+import { Props } from "./Props";
+import { State } from "./State";
+import { Events } from "./Events";
+import { RenderizadoCondicional } from "./RenderizadoCondicional";
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
       <State></State>
       <h1>Events</h1>
       <Events></Events>
+      <h1>Renderizado condicional</h1>
+      <RenderizadoCondicional></RenderizadoCondicional>
     </>
   );
 }
