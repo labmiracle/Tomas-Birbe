@@ -2,6 +2,7 @@ import { Props } from "./Props";
 import { State } from "./State";
 import { Events } from "./Events";
 import { RenderizadoCondicional } from "./RenderizadoCondicional";
+import { Refs } from "./Refs";
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
       <Events></Events>
       <h1>Renderizado condicional</h1>
       <RenderizadoCondicional></RenderizadoCondicional>
+      <h1>Refs</h1>
+      <Refs></Refs>
     </>
   );
 }
