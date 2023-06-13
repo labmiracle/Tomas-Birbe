@@ -1,13 +1,16 @@
 import { Props } from './Props';
 import { State } from './State';
+import { Events } from './Events';
 
 function App() {
   return (
     <>
       <h1>Props</h1>
       <Props></Props>
-      <h2>State</h2>
+      <h1>State</h1>
       <State></State>
+      <h1>Events</h1>
+      <Events></Events>
     </>
   );
 }
