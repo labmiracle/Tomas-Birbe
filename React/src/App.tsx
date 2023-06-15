@@ -3,6 +3,7 @@ import { State } from "./State";
 import { Events } from "./Events";
 import { RenderizadoCondicional } from "./RenderizadoCondicional";
 import { Refs } from "./Refs";
+import ListOfPosts from "./HOC";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
       <RenderizadoCondicional></RenderizadoCondicional>
       <h1>Refs</h1>
       <Refs></Refs>
+      <h1>HOC</h1>
+      <ListOfPosts url="https://jsonplaceholder.typicode.com/posts" />
     </>
   );
 }
