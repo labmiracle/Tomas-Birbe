@@ -14,7 +14,9 @@ export function Hooks() {
 
   return (
     <>
+      <h3>Primer ejercicio</h3>
       <FirstExercise />
+      <h3>Segundo ejercicio</h3>
       <div>
         {showSecondExcercise && <SecondExcercise />}
         <button onClick={toggleSecondExcercise}>
@@ -23,8 +25,11 @@ export function Hooks() {
             : "Montar segundo ejercicio"}
         </button>
       </div>
+      <h3>Tercer ejercicio</h3>
       <ThirdExcercise isSecondExcerciseMounted={showSecondExcercise} />
+      <h3>Cuarto ejercicio</h3>
       <FourthExcercise />
+      <h3>Quinto ejercicio</h3>
       <FiveExcercise />
     </>
   );

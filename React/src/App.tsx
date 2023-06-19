@@ -9,19 +9,19 @@ import { Hooks } from "./Hooks";
 function App() {
   return (
     <>
-      <h1>Props</h1>
+      <h2>Props</h2>
       <Props></Props>
-      <h1>State</h1>
+      <h2>State</h2>
       <State></State>
-      <h1>Events</h1>
+      <h2>Events</h2>
       <Events></Events>
-      <h1>Renderizado condicional</h1>
+      <h2>Renderizado condicional</h2>
       <RenderizadoCondicional></RenderizadoCondicional>
-      <h1>Refs</h1>
+      <h2>Refs</h2>
       <Refs></Refs>
-      <h1>HOC</h1>
+      <h2>HOC</h2>
       <ListOfPosts url="https://jsonplaceholder.typicode.com/posts" />
-      <h1>Hooks</h1>
+      <h2>Hooks</h2>
       <Hooks />
     </>
   );

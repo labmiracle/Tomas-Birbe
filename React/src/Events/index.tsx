@@ -14,9 +14,13 @@ export function Events() {
 
   return (
     <>
+      <h3>Primer ejercicio</h3>
       <Todo></Todo>
+
+      <h3>Segundo ejercicio</h3>
       <RandomText></RandomText>
 
+      <h3>Tercer ejercicio</h3>
       <p>{selectedValue ? selectedValue : "Previsualizacion"}</p>
       <label htmlFor="countries">Elegi un pais</label>
       <select
