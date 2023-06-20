@@ -16,42 +16,44 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-  },
-  {
-    path: "/props",
-    element: <Props />,
-  },
-  {
-    path: "/state",
-    element: <State />,
-  },
-  {
-    path: "/events",
-    element: <Events />,
-  },
-  {
-    path: "/renderizado-condicional",
-    element: <RenderizadoCondicional />,
-  },
-  {
-    path: "/refs",
-    element: <Refs />,
-  },
-  {
-    path: "/context",
-    element: <Context />,
-  },
-  {
-    path: "/hoc",
-    element: <HOC />,
-  },
-  {
-    path: "/hooks",
-    element: <Hooks />,
-  },
-  {
-    path: "/painting-list",
-    element: <PaintingList />,
+    children: [
+      {
+        path: "/props",
+        element: <Props />,
+      },
+      {
+        path: "/state",
+        element: <State />,
+      },
+      {
+        path: "/events",
+        element: <Events />,
+      },
+      {
+        path: "/renderizado-condicional",
+        element: <RenderizadoCondicional />,
+      },
+      {
+        path: "/refs",
+        element: <Refs />,
+      },
+      {
+        path: "/context",
+        element: <Context />,
+      },
+      {
+        path: "/hoc",
+        element: <HOC />,
+      },
+      {
+        path: "/hooks",
+        element: <Hooks />,
+      },
+      {
+        path: "/painting-list",
+        element: <PaintingList />,
+      },
+    ],
   },
 ]);
 

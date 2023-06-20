@@ -1,0 +1,16 @@
+.links {
+	display: flex;
+	gap: 24px;
+	background-color: black;
+	padding-block: 12px;
+	padding-inline: 16px;
+	
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+
+a:visited {}
