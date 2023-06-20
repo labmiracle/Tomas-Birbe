@@ -1,0 +1,15 @@
+.crafting_table {
+	display: grid;
+	grid-template-columns: repeat(3, 100px);
+	width: min-content;
+	gap: 4px;
+	background-color: var(--crafting-background);
+	border: 4px solid var(--crafting-background);
+}
+
+.inventory {
+	display: flex;
+}
+
+
+

@@ -1,0 +1,29 @@
+:root {
+	--crafting-box: #848484;
+	--crafting-box-shadow: rgba(132, 132, 132, 0.4);
+	--crafting-background: #bcbcbc;
+	--crafting-background-shadow: rgba(53, 53, 53);
+}
+
+html,
+body,
+#root,
+main {
+	height: 100%;
+}
+
+html {
+	font-family: 'Press Start 2P', cursive;
+}
+
+body {
+	background-color: var(--crafting-background);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	flex-shrink: 0;
+	flex-grow: 0;
+}
