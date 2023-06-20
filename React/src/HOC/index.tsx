@@ -1,14 +1,5 @@
-import { withPosts } from "./HOC";
-import type { Post } from "./types";
+import ListOfPosts from "./ListOfPosts";
 
-function ListOfPosts({ posts }: { posts: Post[] }) {
-  return (
-    <ul>
-      {posts.map((post) => (
-        <li key={post.id}>{post.title}</li>
-      ))}
-    </ul>
-  );
+export function HOC() {
+  return <ListOfPosts url="https://jsonplaceholder.typicode.com/posts" />;
 }
-
-export default withPosts(ListOfPosts);
