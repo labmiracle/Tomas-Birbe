@@ -1,0 +1,17 @@
+.select {
+	background-color: transparent;
+	border: 1px solid #1d283a;
+	border-radius: 4px;
+	padding-inline-start: 8px;
+	padding-block: 6px;
+	color: white;
+}
+
+.select:focus-visible {
+	outline: 1px solid #1d283a;
+	outline-offset: 1px;
+}
+
+.select>option {
+	background-color: black;
+}

@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
+import { Select } from "../ui/Select";
 
 export function SelectCountry() {
   const [selectedValue, setSelectedValue] = useState("");
 
   return (
     <>
-      <p>{selectedValue ? selectedValue : "Previsualizacion del pais"}</p>
+      <p>{selectedValue ? selectedValue : "Previsualizacion"}</p>
+
       <label htmlFor="countries">Elegi un pais</label>
-      <select
+      <Select
         name="country"
         id="country"
         onChange={(e) => setSelectedValue(e.target.value)}>
@@ -15,7 +17,7 @@ export function SelectCountry() {
         <option value="Brasil">Brasil</option>
         <option value="Chile">Chile</option>
         <option value="Uruguay">Uruguay</option>
-      </select>
+      </Select>
     </>
   );
 }

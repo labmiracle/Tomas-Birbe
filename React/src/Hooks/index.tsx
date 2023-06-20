@@ -4,6 +4,7 @@ import { SecondExcercise } from "./SecondExcercise";
 import { ThirdExcercise } from "./ThirdExcercise";
 import { FourthExcercise } from "./FourthExcercise";
 import { FiveExcercise } from "./FiveExcercise";
+import { Button } from "../ui/Button";
 
 export function Hooks() {
   const [showSecondExcercise, setShowSecondExcercise] = useState(true);
@@ -19,11 +20,11 @@ export function Hooks() {
       <h3>Segundo ejercicio</h3>
       <div>
         {showSecondExcercise && <SecondExcercise />}
-        <button onClick={toggleSecondExcercise}>
+        <Button onClick={toggleSecondExcercise}>
           {showSecondExcercise
             ? "Desmontar segundo ejercicio"
             : "Montar segundo ejercicio"}
-        </button>
+        </Button>
       </div>
       <h3>Tercer ejercicio</h3>
       <ThirdExcercise isSecondExcerciseMounted={showSecondExcercise} />

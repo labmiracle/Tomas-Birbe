@@ -1,16 +1,32 @@
+nav {
+	border-block-end: 1px solid gray;
+}
+
 .links {
 	display: flex;
-	gap: 24px;
+	gap: 8px;
 	background-color: black;
 	padding-block: 12px;
 	padding-inline: 16px;
-	
 }
 
 a {
-	color: white;
+	text-decoration: none;
+	padding-inline: 12px;
+	border-radius: 4px;
+	outline: 2px solid transparent;
+	transition: all ease-in-out 150ms;
+}
+
+a:hover {
+	outline: 2px solid white;
 	text-decoration: none;
 }
 
+a:visited {
+	color: white;
+}
 
-a:visited {}
+main {
+	padding-block-start: 20px;
+}

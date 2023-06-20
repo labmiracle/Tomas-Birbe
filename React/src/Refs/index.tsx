@@ -1,4 +1,7 @@
 import { useRef } from "react";
+import { Input } from "../ui/Input";
+import { Button } from "../ui/Button";
+import styles from "./index.module.css";
 
 export function Refs() {
   const nombreRef = useRef<HTMLInputElement>(null);
@@ -17,11 +20,15 @@ export function Refs() {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="nombre">Nombre</label>
-        <input ref={nombreRef} type="text" id="nombre" />
-        <label htmlFor="apellido">Apellido</label>
-        <input ref={apellidoRef} type="text" id="apellido" />
-        <button type="submit">Mostrar en consola</button>
+        <div className={styles.field}>
+          <label htmlFor="nombre">Nombre</label>
+          <Input ref={nombreRef} type="text" id="nombre" />
+        </div>
+        <div className={styles.field}>
+          <label htmlFor="apellido">Apellido</label>
+          <Input ref={apellidoRef} type="text" id="apellido" />
+        </div>
+        <Button type="submit">Mostrar en consola</Button>
       </form>
     </>
   );

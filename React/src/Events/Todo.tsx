@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { Button } from "../ui/Button";
+import styles from "./index.module.css";
 
 type Todo = {
   userId: number;
@@ -11,7 +13,7 @@ export function Todo() {
   const [todo, setTodo] = useState({} as Todo);
 
   function getTodo() {
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
+    fetch("https://jsonplaceholder.typicode.com/todos/1")
       .then((res) => res.json())
       .then((data) => {
         console.log(data.completed);
@@ -29,10 +31,12 @@ export function Todo() {
       <p>title:{todo.title}</p>
       <p>
         completed:
-        {todo.completed !== undefined ? todo.completed.toString() : ''}
+        {todo.completed !== undefined ? todo.completed.toString() : ""}
       </p>
-      <button onClick={getTodo}>Obtener tarea</button>
-      <button onClick={clearTodo}>Limpiar tarea</button>
+      <div className={styles.buttonContainer}>
+        <Button onClick={getTodo}>Obtener tarea</Button>
+        <Button onClick={clearTodo}>Limpiar tarea</Button>
+      </div>
     </>
   );
 }

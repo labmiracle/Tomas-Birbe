@@ -4,7 +4,6 @@ import { NavLink, Outlet } from "react-router-dom";
 function App() {
   return (
     <>
-      <h1>Ejercitacion para React!</h1>
       <nav>
         <ul className={styles.links}>
           <NavLink to="/props">Props</NavLink>
@@ -20,7 +19,9 @@ function App() {
           <NavLink to="/painting-list">Painting List</NavLink>
         </ul>
       </nav>
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
     </>
   );
 }

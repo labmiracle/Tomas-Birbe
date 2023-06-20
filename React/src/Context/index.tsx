@@ -1,4 +1,4 @@
-import { LangProvider, useLang } from "./LangContext";
+import { LangProvider } from "./LangContext";
 import { Excercise } from "./Excercise";
 
 export function Context() {

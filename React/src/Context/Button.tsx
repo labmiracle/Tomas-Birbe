@@ -1,3 +1,5 @@
+import { Button as StyledButton } from "../ui/Button";
+
 export function Button({
   handler,
   children,
@@ -5,5 +7,5 @@ export function Button({
   handler: () => void;
   children: React.ReactNode;
 }) {
-  return <button onClick={handler}>{children}</button>;
+  return <StyledButton onClick={handler}>{children}</StyledButton>;
 }

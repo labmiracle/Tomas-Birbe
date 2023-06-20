@@ -11,6 +11,7 @@ import { State } from "./State";
 import { RenderizadoCondicional } from "./RenderizadoCondicional";
 import { Refs } from "./Refs";
 import { PaintingList } from "./PaintingLists/index.tsx";
+import "./main.css";
 
 const router = createBrowserRouter([
   {

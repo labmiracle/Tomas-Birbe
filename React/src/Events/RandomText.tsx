@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Input } from "../ui/Input";
 
 export function RandomText() {
   const [text, setText] = useState("");
@@ -8,7 +9,7 @@ export function RandomText() {
       <p>Escribi cualquier texto!</p>
       <p>{text ? text : "Previsualizacion del texto"}</p>
       <label htmlFor="randomText">Texto </label>
-      <input
+      <Input
         type="text"
         id="randomText"
         placeholder="Cualquier texto"

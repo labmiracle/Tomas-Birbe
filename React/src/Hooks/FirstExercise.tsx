@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Input } from "../ui/Input";
+import styles from "./FirstExcercise.module.css";
 
 export function FirstExercise() {
   const [text, setText] = useState("");
@@ -19,12 +21,14 @@ export function FirstExercise() {
   return (
     <>
       <p>{text === "" ? "Previsualizacion del texto" : formattedText()}</p>
-      <label htmlFor="aIntob">Ingresa una palabra </label>
-      <input
-        type="text"
-        id="aIntob"
-        onChange={(e) => setText(e.target.value)}
-      />
+      <div className={styles.field}>
+        <label htmlFor="aIntob">Ingresa una palabra </label>
+        <Input
+          type="text"
+          id="aIntob"
+          onChange={(e) => setText(e.target.value)}
+        />
+      </div>
     </>
   );
 }

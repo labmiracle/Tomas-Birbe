@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from "../ui/Button";
 
 export function RenderizadoCondicional() {
   const [isLogged, setIsLogged] = useState(true);
@@ -8,12 +9,12 @@ export function RenderizadoCondicional() {
       {isLogged ? (
         <>
           <p>Esta pagina solo puedo verla porque estoy logueado</p>
-          <button onClick={() => setIsLogged(false)}>Log out</button>
+          <Button onClick={() => setIsLogged(false)}>Log out</Button>
         </>
       ) : (
         <>
           <p>Inicia sesion para ver contenido privado</p>
-          <button onClick={() => setIsLogged(true)}>Log in</button>
+          <Button onClick={() => setIsLogged(true)}>Log in</Button>
         </>
       )}
     </>

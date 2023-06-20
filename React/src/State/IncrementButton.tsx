@@ -1,8 +1,10 @@
+import { Button } from "../ui/Button";
+
 interface Props {
   children: React.ReactNode;
   handleClick: () => void;
 }
 
 export function IncrementButton({ children, handleClick }: Props) {
-  return <button onClick={handleClick}>{children}</button>;
+  return <Button onClick={handleClick}>{children}</Button>;
 }

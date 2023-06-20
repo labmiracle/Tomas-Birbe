@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+	font-family: 'Lora', serif;
+	color: #FAC748;
+}
+
+p {
+	overflow-wrap: break-word;
+}
+
+#root {
+	isolation: isolate;
+	width: 100%;
+	max-width: 1024px;
+}
+
+/* Custom */
+
+body {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: black;
+	color: white;
+	font-family: 'DM Sans', sans-serif;
+	line-height: 1.7;
+}
+
+main {
+	padding-block: 24px;
+}

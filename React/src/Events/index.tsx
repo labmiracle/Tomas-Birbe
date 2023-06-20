@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Todo } from "./Todo";
 import { RandomText } from "./RandomText";
+import styles from "./index.module.css";
+import { SelectCountry } from "./SelectCountry";
 
 type Todo = {
   userId: number;
@@ -10,10 +12,8 @@ type Todo = {
 };
 
 export function Events() {
-  const [selectedValue, setSelectedValue] = useState("");
-
   return (
-    <>
+    <div className={styles.container}>
       <h3>Primer ejercicio</h3>
       <Todo></Todo>
 
@@ -21,17 +21,7 @@ export function Events() {
       <RandomText></RandomText>
 
       <h3>Tercer ejercicio</h3>
-      <p>{selectedValue ? selectedValue : "Previsualizacion"}</p>
-      <label htmlFor="countries">Elegi un pais</label>
-      <select
-        name="country"
-        id="country"
-        onChange={(e) => setSelectedValue(e.target.value)}>
-        <option value="Argentina">Argentina</option>
-        <option value="Brasil">Brasil</option>
-        <option value="Chile">Chile</option>
-        <option value="Uruguay">Uruguay</option>
-      </select>
-    </>
+      <SelectCountry />
+    </div>
   );
 }

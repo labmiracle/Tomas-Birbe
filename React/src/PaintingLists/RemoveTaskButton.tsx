@@ -1,5 +1,5 @@
-import type { Todo } from "./types";
+import { SecondaryButton } from "../ui/SecondaryButton";
 
 export function RemoveTaskButton({ handleClick }: { handleClick: () => void }) {
-  return <button onClick={handleClick}>X</button>;
+  return <SecondaryButton onClick={handleClick}>x</SecondaryButton>;
 }

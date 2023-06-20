@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { Button } from "../ui/Button";
+import styles from "./index.module.css";
 
 export function Word() {
-  const [word, setWord] = useState('');
+  const [word, setWord] = useState("");
 
   function increment() {
-    setWord(word + 'a');
+    setWord(word + "a");
   }
 
   function decrement() {
@@ -13,9 +15,11 @@ export function Word() {
 
   return (
     <div>
-      <p>{word}</p>
-      <button onClick={decrement}>-</button>
-      <button onClick={increment}>+</button>
+      <p className={styles.display}>{word}</p>
+      <div className={styles.buttonContainer}>
+        <Button onClick={decrement}>-</Button>
+        <Button onClick={increment}>+</Button>
+      </div>
     </div>
   );
 }
