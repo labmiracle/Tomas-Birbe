@@ -1,7 +1,7 @@
 :root {
 	--crafting-box: #848484;
 	--crafting-box-shadow: rgba(132, 132, 132, 0.4);
-	--crafting-background: #bcbcbc;
+	--crafting-background: #c6c6c6;
 	--crafting-background-shadow: rgba(53, 53, 53);
 }
 
@@ -26,4 +26,6 @@ main {
 	gap: 30px;
 	flex-shrink: 0;
 	flex-grow: 0;
+	padding-inline: 35px;
+	padding-block: 35px;
 }

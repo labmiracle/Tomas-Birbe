@@ -1,4 +1,11 @@
 .crafting_table {
+	display: flex;
+	width: 650px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.recipe {
 	display: grid;
 	grid-template-columns: repeat(3, 100px);
 	width: min-content;
@@ -9,7 +16,5 @@
 
 .inventory {
 	display: flex;
+	flex-wrap: wrap;
 }
-
-
-

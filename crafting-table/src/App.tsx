@@ -5,14 +5,18 @@ function App() {
   return (
     <main>
       <div className={styles.crafting_table}>
-        <Box value="Item" />
-        <Box value="Item" />
-        <Box value="Item" />
-        <Box value="Item" />
-        <Box value="Item" />
-        <Box value="Item" />
-        <Box value="Item" />
-        <Box value="Item" />
+        <div className={styles.recipe}>
+          <Box value="Item" />
+          <Box value="Item" />
+          <Box value="Item" />
+          <Box value="Item" />
+          <Box value="Item" />
+          <Box value="Item" />
+          <Box value="Item" />
+          <Box value="Item" />
+          <Box value="Item" />
+        </div>
+        <img src="arrow.jpg" alt="" width="100px" />
         <Box value="Item" />
       </div>
       <p>Inventory</p>

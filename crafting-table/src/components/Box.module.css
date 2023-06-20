@@ -7,4 +7,5 @@
 	background-color: var(--crafting-box);
 	box-shadow: inset 2px 2px 1px 1px var(--crafting-background-shadow), inset -2px -2px 1px 1px white;
 	color: white;
+	flex-shrink: 0;
 }
