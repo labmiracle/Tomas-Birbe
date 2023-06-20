@@ -19,9 +19,7 @@ function App() {
           <NavLink to="/painting-list">Painting List</NavLink>
         </ul>
       </nav>
-      <main>
-        <Outlet />
-      </main>
+      <Outlet />
     </>
   );
 }
