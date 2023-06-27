@@ -68,4 +68,22 @@ describe("Listas Enlazadas", () => {
       expect(list.find((person) => person.lastName === "Jagger")).toBeNull();
     });
   });
+  describe("Ejercicio 2: Agregar metodo invert", () => {
+    test("Metodo invert", () => {
+      const list = new LinkedList<Person>();
+
+      const persons = [
+        { name: "Elvis", lastName: "Presley" },
+        { name: "Michael", lastName: "Jackson" },
+        { name: "Bob", lastName: "Dylan" },
+      ];
+
+      for (const person of persons) {
+        list.add(person);
+      }
+      expect(list.getContent()).toEqual(persons);
+      list.invert();
+      expect(list.getContent()).toEqual(persons.reverse());
+    });
+  });
 });

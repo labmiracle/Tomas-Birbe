@@ -64,4 +64,30 @@ export class LinkedList<T> {
     }
     return null;
   }
+
+  invert() {
+    let node = this.head;
+    let prevNode = null;
+    let nextNode = null;
+
+    while (node) {
+      nextNode = node.next();
+      node.setNext(prevNode);
+      prevNode = node;
+      node = nextNode;
+    }
+
+    [this.head, this.lastNode] = [this.lastNode, this.head];
+  }
+
+  getContent() {
+    let node = this.head;
+    const listAsArray = [];
+    while (node) {
+      listAsArray.push(node.getContent());
+      node = node.next();
+    }
+
+    return listAsArray;
+  }
 }
