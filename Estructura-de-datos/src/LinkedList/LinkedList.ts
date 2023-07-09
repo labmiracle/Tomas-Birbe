@@ -1,16 +1,7 @@
+import { List } from "./List";
 import { Node } from "./Node";
 
-export class LinkedList<T> {
-  private head: Node<T> | null;
-  private lastNode: Node<T> | null;
-  private size: number;
-
-  constructor() {
-    this.head = null;
-    this.lastNode = null;
-    this.size = 0;
-  }
-
+export class LinkedList<T> extends List<Node<T>> {
   add(value: T) {
     const node = new Node(value);
 
@@ -29,7 +20,7 @@ export class LinkedList<T> {
   remove(callback: (value: T) => boolean) {
     if (this.head && callback(this.head.getContent())) {
       const removedNode = this.head;
-      this.head = this.head.next();
+      this.head = this.head.getNext();
       this.size--;
       return removedNode.getContent();
     } else {
@@ -37,13 +28,13 @@ export class LinkedList<T> {
       let prevNode = null;
       while (node) {
         if (callback(node.getContent())) {
-          prevNode.setNext(node.next());
+          prevNode.setNext(node.getNext());
           node.setNext(null);
           this.size--;
           return node.getContent();
         }
         prevNode = node;
-        node = node.next();
+        node = node.getNext();
       }
       return null;
     }
@@ -60,7 +51,7 @@ export class LinkedList<T> {
       if (callback(node.getContent())) {
         return node.getContent();
       }
-      node = node.next();
+      node = node.getNext();
     }
     return null;
   }
@@ -71,7 +62,7 @@ export class LinkedList<T> {
     let nextNode = null;
 
     while (node) {
-      nextNode = node.next();
+      nextNode = node.getNext();
       node.setNext(prevNode);
       prevNode = node;
       node = nextNode;
@@ -85,9 +76,28 @@ export class LinkedList<T> {
     const listAsArray = [];
     while (node) {
       listAsArray.push(node.getContent());
-      node = node.next();
+      node = node.getNext();
     }
 
     return listAsArray;
+  }
+
+  deleteDups() {
+    let node = this.head;
+    while (node) {
+      let nodeAux = node.getNext();
+      let prevNode = node;
+      while (nodeAux) {
+        if (node.getContent() === nodeAux.getContent()) {
+          prevNode.setNext(nodeAux.getNext());
+          nodeAux = nodeAux.getNext();
+          this.size--;
+        } else {
+          prevNode = nodeAux;
+          nodeAux = nodeAux.getNext();
+        }
+      }
+      node = node.getNext();
+    }
   }
 }

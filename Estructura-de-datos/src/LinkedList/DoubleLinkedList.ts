@@ -1,32 +1,7 @@
 import { DoubleNode } from "./DoubleNode";
+import { List } from "./List";
 
-export class DoubleLinkedList<T> {
-  private head: DoubleNode<T> | null;
-  private lastNode: DoubleNode<T> | null;
-  private size: number;
-
-  constructor() {
-    this.head = null;
-    this.lastNode = null;
-    this.size = 0;
-  }
-
-  getHead() {
-    return this.head;
-  }
-
-  setHead(value: T) {
-    this.head = new DoubleNode(value);
-  }
-
-  getLastNode() {
-    return this.head;
-  }
-
-  setLastNode(value: T) {
-    this.head = new DoubleNode(value);
-  }
-
+export class DoubleLinkedList<T> extends List<DoubleNode<T>> {
   add(value: T) {
     const node = new DoubleNode(value);
 
@@ -54,7 +29,9 @@ export class DoubleLinkedList<T> {
       while (node) {
         if (callback(node.getContent())) {
           node.getPrev().setNext(node.getNext());
-          node.setNext(null);
+          if (node !== this.lastNode) {
+            node.getNext().setPrev(node.getPrev());
+          }
           this.size--;
           return node.getContent();
         }
@@ -89,8 +66,8 @@ export class DoubleLinkedList<T> {
       node.setPrev(nextNode);
 
       node = nextNode;
-		}
-		
+    }
+
     [this.head, this.lastNode] = [this.lastNode, this.head];
   }
 
@@ -103,5 +80,23 @@ export class DoubleLinkedList<T> {
     }
 
     return listAsArray;
+  }
+
+  deleteDups() {
+    let node = this.head;
+    while (node) {
+      let nodeAux = node.getNext();
+      while (nodeAux) {
+        if (node.getContent() === nodeAux.getContent()) {
+          nodeAux.getPrev().setNext(nodeAux.getNext());
+          nodeAux.getNext().setPrev(nodeAux.getPrev());
+          nodeAux = nodeAux.getNext();
+          this.size--;
+        } else {
+          nodeAux = nodeAux.getNext();
+        }
+      }
+      node = node.getNext();
+    }
   }
 }

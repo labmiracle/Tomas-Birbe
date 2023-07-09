@@ -11,7 +11,7 @@ export class Node<T> {
     return this.content;
   }
 
-  public next() {
+  public getNext() {
     return this.nextNode;
   }
 

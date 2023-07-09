@@ -86,4 +86,18 @@ describe("Listas Enlazadas", () => {
       expect(list.getContent()).toEqual(persons.reverse());
     });
   });
+  describe("Ejercicio 4: Agregar metodo deleteDups", () => {
+    test("Metodo deleteDups", () => {
+      const list = new LinkedList<number>();
+
+      const persons = [1, 2, 3, 3, 4, 5, 6, 3, 4, 2, 1];
+
+      for (const person of persons) {
+        list.add(person);
+      }
+      expect(list.getContent()).toEqual(persons);
+      list.deleteDups();
+      expect(list.getContent()).toEqual([1, 2, 3, 4, 5, 6]);
+    });
+  });
 });

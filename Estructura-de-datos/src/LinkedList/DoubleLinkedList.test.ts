@@ -28,6 +28,7 @@ describe("Listas Enlazadas", () => {
       list.add({ name: "Elvis", lastName: "Presley" });
       list.add({ name: "Michael", lastName: "Jackson" });
       expect(list.remove((person) => person.lastName === "Jackson")).toEqual({ name: "Michael", lastName: "Jackson" });
+      console.log(list.getContent());
       expect(list.getSize()).toBe(1);
     });
 
@@ -84,6 +85,20 @@ describe("Listas Enlazadas", () => {
       expect(list.getContent()).toEqual(persons);
       list.invert();
       expect(list.getContent()).toEqual(persons.reverse());
+    });
+  });
+  describe("Ejercicio 4: Agregar metodo deleteDups", () => {
+    test("Metodo deleteDups", () => {
+      const list = new DoubleLinkedList<number>();
+
+      const numbers = [1, 2, 3, 4, 3, 3, 5, 6];
+
+      for (const number of numbers) {
+        list.add(number);
+      }
+      expect(list.getContent()).toEqual(numbers);
+      list.deleteDups();
+      expect(list.getContent()).toEqual([1, 2, 3, 4, 5, 6]);
     });
   });
 });
