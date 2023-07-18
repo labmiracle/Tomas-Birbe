@@ -6,7 +6,7 @@ export class Stack<T> {
   }
 
   push(element: T) {
-    this.collection.unshift(element);
+    this.collection.push(element);
     return this.collection.length;
   }
 
@@ -51,12 +51,12 @@ export function toBase(base: number, number: number) {
     number = Math.floor(number / base);
   }
 
-  let convertedNumber = "";
+  const convertedNumber = [];
   let emptyStack = stack.size();
   while (emptyStack > 0) {
-    convertedNumber += stack.pop();
+    convertedNumber.push(stack.pop());
     emptyStack = stack.size();
   }
 
-  return convertedNumber;
+  return convertedNumber.reverse().join("");
 }

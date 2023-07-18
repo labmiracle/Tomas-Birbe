@@ -28,7 +28,6 @@ describe("Listas Enlazadas", () => {
       list.add({ name: "Elvis", lastName: "Presley" });
       list.add({ name: "Michael", lastName: "Jackson" });
       expect(list.remove((person) => person.lastName === "Jackson")).toEqual({ name: "Michael", lastName: "Jackson" });
-      console.log(list.getContent());
       expect(list.getSize()).toBe(1);
     });
 
